@@ -13,6 +13,7 @@ interface Notification {
 }
 
 const LowClub = () => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [notifications] = useState<Notification[]>([
     // Notificações em cima - Atrás do corpo (z-index menor)
     {
