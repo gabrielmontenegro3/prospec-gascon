@@ -30,7 +30,3 @@ AppData/
 # VSCode extensions (should not be in repo)
 .vscode/extensions/
 
-# Project specific
-public/Button1.png
-public/imgmatheus.png
-

@@ -123,12 +123,6 @@ const LowClub = () => {
                   src="/imgmatheus.png"
                   alt="Matheus Gascon"
                   className="matheus-image max-w-full h-auto max-h-[500px] object-contain"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement
-                    if (target.src !== window.location.origin + "/imgmatheus.png") {
-                      target.src = "./imgmatheus.png"
-                    }
-                  }}
                 />
               </div>
             </motion.div>
