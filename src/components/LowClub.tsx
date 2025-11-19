@@ -31,7 +31,7 @@ const LowClub = () => {
       title: "Transferência Recebida",
       message: "Você recebeu uma transferência",
       position: { top: "15%", right: "8%" },
-      delay: 1,
+      delay: 0.05,
       zIndex: 10,
     },
     // Notificações abaixo - Na frente do corpo (z-index maior)
@@ -41,7 +41,7 @@ const LowClub = () => {
       title: "Transferência PIX Recebida",
       message: "Você recebeu uma transferência de R$800",
       position: { bottom: "20%", left: "8%" },
-      delay: 2,
+      delay: 0.1,
       zIndex: 30,
     },
     {
@@ -50,7 +50,7 @@ const LowClub = () => {
       title: "Transferência Recebida",
       message: "Você recebeu uma transferência de R$1.200",
       position: { bottom: "15%", right: "5%" },
-      delay: 3,
+      delay: 0.15,
       zIndex: 30,
     },
   ])
@@ -419,6 +419,7 @@ const NotificationCard = ({ notification }: { notification: Notification }) => {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
+    // Mostra imediatamente, com delay mínimo apenas para animação suave
     const timer = setTimeout(() => {
       setIsVisible(true)
     }, notification.delay * 1000)
@@ -442,7 +443,7 @@ const NotificationCard = ({ notification }: { notification: Notification }) => {
           : {}
       }
       transition={{
-        duration: 0.5,
+        duration: 0.4,
         delay: notification.delay,
         rotate: {
           duration: 0.3,
